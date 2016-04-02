@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>User Registration System</h1>
+        </header>
+        <main class="row">
+            
+            <aside class="col-sm-6">
+                <h2>User Profile</h2>
+                <div>
+                    <ul>
+                        <li>First Name: <%= profile.firstName %></li>
+                        <li>Last Name: <%= profile.lastName %></li>
+                        <li>Hobby: <%= profile.hobby %></li>
+                        <li>Pet Name: <%= profile.petName %></li>
+                    </ul>    
+                </div>
+                
+                <div>
+                    <form action = "/updateProfile" method = "post">
+                        <ul>
+                            <li>First Name: <input type="text" name = "firstname"></li>
+                            <li>Last Name: <input type="text" name = "lastname"></li>
+                            <li>Hobby: <input type="text" name = "hobby"></li>
+                            <li>Pet Name: <input type="text" name = "petname"></li>
+                            <input type = "submit" value = "Update">
+                        </ul> 
+                    </form>
+                </div>
+                <div>
+                    <form action = "/logout" method = "post">
+                        <input type = "submit" value = "Log out">
+                    </form>
+                </div>
+                
+            </aside>
+
+        </main>
+    </div>
+
+    <% include ../partials/scripts %>
+</body>
+
+</html>
